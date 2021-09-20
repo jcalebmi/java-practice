@@ -16,5 +16,9 @@ public class Main {
         String mystring = "this is a string";
 
         System.out.println(mystring);
+
+        boolean isAlien = false;
+        if (!isAlien)
+            System.out.println("not an Alien");
     }
 }
