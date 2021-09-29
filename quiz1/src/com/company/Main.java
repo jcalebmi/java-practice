@@ -4,8 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        printConversion(95.75);
-        printMegaBytesAndKiloBytes(2500);
+//        printConversion(95.75);
+//        printMegaBytesAndKiloBytes(2500);
+//        shouldWakeUp(true, 23);
+        isLeapYear(1855);
+
     }
     public static long toMilesPerHour (double kilometersPerHour) {
         long mph = Math.round(kilometersPerHour / 1.609);
@@ -29,6 +32,40 @@ public class Main {
 
 
         System.out.print(kiloBytes + " KB = " + MB + " MB and " + KB + " KB");
+    }
+
+    public static boolean shouldWakeUp (boolean barking, int hourOfDay) {
+        if(hourOfDay < 0 || hourOfDay > 24) {
+            return false;
+        }
+        boolean wakeUp = false;
+       if (!barking) {
+           return false;
+       } else {
+           wakeUp = hourOfDay > 22 || hourOfDay < 8 ? true : false;
+       }
+
+       return wakeUp;
+    }
+
+    public static boolean isLeapYear (int year) {
+        if (year < 1 || year > 9999) {
+            return false;
+        }
+        if (year % 4 == 0) {
+            return false;
+        }
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                return true;
+            } else {
+                System.out.println(year % 100);
+                return false;
+            }
+        } else {
+            System.out.println(year % 100);
+            return true;
+        }
     }
 
 }
