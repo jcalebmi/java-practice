@@ -7,8 +7,8 @@ public class Main {
 //        printConversion(95.75);
 //        printMegaBytesAndKiloBytes(2500);
 //        shouldWakeUp(true, 23);
-        isLeapYear(1855);
-
+//        isLeapYear(1855);
+        areEqualByThreeDecimalPlaces(-3.1756, -3.175);
     }
     public static long toMilesPerHour (double kilometersPerHour) {
         long mph = Math.round(kilometersPerHour / 1.609);
@@ -66,6 +66,10 @@ public class Main {
             System.out.println(year % 100);
             return true;
         }
+    }
+
+    public static boolean areEqualByThreeDecimalPlaces(double one, double two) {
+        return (int)(one * 1000) == (int)(two * 1000);
     }
 
 }
