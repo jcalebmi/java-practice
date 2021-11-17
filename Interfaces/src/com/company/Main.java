@@ -28,8 +28,13 @@ public class Main {
         System.out.println(tim);
         tim.setWeapon("Stormbringer");
         saveObject(tim);
-        loadObject(tim);
+        //loadObject(tim);
         System.out.println(tim);
+
+        ISavable werewolf = new Monster("Werewolf", 20, 50);
+        System.out.println(werewolf);
+        System.out.println("Strength =" + ((Monster) werewolf).getStrength());
+        saveObject(werewolf);
     }
 
     public static ArrayList<String> readValues() {
